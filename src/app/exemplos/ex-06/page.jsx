@@ -1,33 +1,36 @@
-export function ListaProdutos() {
-    const [produtos, setProdutos] = useState([]);
+import { useState, useEffect } from 'react';
 
+export function InputsComplexos() {
+    const [categorias, setCategorias] = useState([]);
+    const [valor, setValor] = useState("");
+    const [comentario, setComentario] = useState("");
+
+    // Simulando carregamento de API (JSON)
     useEffect(() => {
-        // Simulando JSON de API
-        const dadosApi = [
-            { id: 1, nome: "Notebook", preco: 4500, img: "https://via.placeholder.com/50" },
-            { id: 2, nome: "Mouse", preco: 150, img: "https://via.placeholder.com/50" }
-        ];
-        setProdutos(dadosApi);
+        const mockAPI = ["Tecnologia", "Educação", "Saúde"];
+        setCategorias(mockAPI);
     }, []);
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Foto</th>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-                {produtos.map(p => (
-                    <tr key={p.id}>
-                        <td><img src={p.img} alt={p.nome} style={{ borderRadius: '50%' }} /></td>
-                        <td>{p.nome}</td>
-                        <td>R$ {p.preco}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+        <div>
+            {/* Input Number, Date e Color */}
+            <input type="number" placeholder="Idade" onChange={(e) => console.log(e.target.value)} />
+            <input type="date" onChange={(e) => console.log(e.target.value)} />
+            <input type="color" onChange={(e) => console.log(e.target.value)} />
+
+            {/* Select preenchido via JSON */}
+            <select value={valor} onChange={(e) => setValor(e.target.value)}>
+                <option value="">Selecione uma categoria</option>
+                {categorias.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+            </select>
+
+            {/* Textarea */}
+            <textarea
+                rows="4"
+                placeholder="Sua bio..."
+                value={comentario}
+                onChange={(e) => setComentario(e.target.value)}
+            />
+        </div>
     );
 }
