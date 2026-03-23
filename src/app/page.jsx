@@ -7,16 +7,17 @@ function Home() {
     <div className={styles.containerHome} > 
       <div className={styles.containerListas}>
         <h1>Exemplos</h1>
-        <Link href="/exemplos/ex-01">Exemplo 1</Link>
-        <Link href="/exemplos/ex-02">Exemplo 2</Link>        
-        <Link href="/exemplos/ex-03">Exemplo 3</Link>        
-        <Link href="/exemplos/ex-04">Exemplo 4</Link>        
+        <Link href="/exemplos/ex-01">Exemplo 1 - Componente básico</Link>
+        <Link href="/exemplos/ex-02">Exemplo 2 - Uso de CSS</Link>        
+        <Link href="/exemplos/ex-03">Exemplo 3 - State</Link>        
+        <Link href="/exemplos/ex-04">Exemplo 4 - Componentes</Link>        
+        <Link href="/exemplos/ex-05">Exemplo 5 - Formulário</Link>        
       </div>
       <div className={styles.containerListas}>
         <h1>Atividades</h1>
-        <Link href="/atividades/atv-01">Atividade 1</Link>
-        <Link href="/atividades/atv-02">Atividade 2</Link>
-        <Link href="/atividades/atv-03">Atividade 3</Link>
+        <Link href="/atividades/atv-01">Atividade 1 - Aplicação de CSS</Link>
+        <Link href="/atividades/atv-02">Atividade 2 - State</Link>
+        <Link href="/atividades/atv-03">Atividade 3 - Componentes</Link>
       </div>
     </div>
   );
