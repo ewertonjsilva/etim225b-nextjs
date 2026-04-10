@@ -3,11 +3,14 @@
 import { useState } from 'react';
 
 export default function FormComponent() {
-    const [formData, setFormData] = useState({ nome: '', email: '' });
+
+    // const [formData, setFormData] = useState({ nome: '', email: '' });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Enviando para API:", formData);
+        console.log('Dados do formulário enviados!');
+        
+        // console.log("Enviando para API:", formData);
         // Aqui você faria um POST para sua API
     };
 
@@ -17,8 +20,8 @@ export default function FormComponent() {
             <input
                 id="user"
                 type="text"
-                value={formData.nome}
-                onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+                // value={formData.nome}
+                // onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
             />
             <button type="submit">Enviar Cadastro</button>
         </form>

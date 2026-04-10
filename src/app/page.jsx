@@ -18,6 +18,7 @@ function Home() {
         <Link href="/atividades/atv-01">Atividade 1 - Aplicação de CSS</Link>
         <Link href="/atividades/atv-02">Atividade 2 - State</Link>
         <Link href="/atividades/atv-03">Atividade 3 - Componentes</Link>
+        <Link href="/atividades/atv-04">Atividade 4 - Formulário</Link>
       </div>
     </div>
   );
