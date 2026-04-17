@@ -22,10 +22,11 @@ function Atividade04() {
     // Limpa os campos
     setInputValue({ id: '', quantidade: '', produto: '' });
   };
+  
 
   return (
     <div className={styles.container}>
-      <h1>Formulário básico</h1>
+      <h1>Atividade 4 - Lista de compra</h1>
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
