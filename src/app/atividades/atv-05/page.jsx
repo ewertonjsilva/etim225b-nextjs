@@ -1,7 +1,9 @@
+'use client'
+
 import { useState } from 'react';  
 import { Pencil, Trash2, Plus, Save } from 'lucide-react';
 
-import styles from './index.module.css';
+import styles from './page.module.css';
 
 function Atividade05() {
   // Mock de dados inicial (READ)

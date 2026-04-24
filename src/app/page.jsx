@@ -12,6 +12,7 @@ function Home() {
         <Link href="/exemplos/ex-03">Exemplo 3 - State</Link>        
         <Link href="/exemplos/ex-04">Exemplo 4 - Componentes</Link>        
         <Link href="/exemplos/ex-05">Exemplo 5 - Formulário</Link>        
+        <Link href="/exemplos/ex-06">Exemplo 6 - Variações de entrada de dados</Link>        
       </div>
       <div className={styles.containerListas}>
         <h1>Atividades</h1>
@@ -19,6 +20,7 @@ function Home() {
         <Link href="/atividades/atv-02">Atividade 2 - State</Link>
         <Link href="/atividades/atv-03">Atividade 3 - Componentes</Link>
         <Link href="/atividades/atv-04">Atividade 4 - Formulário</Link>
+        <Link href="/atividades/atv-05">Atividade 5 - Formulário</Link>
       </div>
     </div>
   );

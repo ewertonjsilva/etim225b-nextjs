@@ -4,16 +4,17 @@ import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
 export default function Atividade04() {
+
     const [inputValue, setInputValue] = useState({ quantidade: '', produto: '' });
     const [dadosCadastrados, setDadosCadastrados] = useState([]);
     const [editandoId, setEditandoId] = useState(null);
 
     const [tema, setTema] = useState('light');
 
-    useEffect(() => {
-        // Aplica o atributo no HTML para o CSS ler
-        document.documentElement.setAttribute('data-theme', tema);
-    }, [tema]);
+    // useEffect(() => {
+    //     // Aplica o atributo no HTML para o CSS ler
+    //     document.documentElement.setAttribute('data-theme', tema);
+    // }, [tema]);
 
     const toggleTema = () => {
         setTema(tema === 'light' ? 'dark' : 'light');
