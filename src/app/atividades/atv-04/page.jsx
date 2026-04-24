@@ -1,5 +1,7 @@
+'use client'
+
 import { useState, useEffect } from 'react';
-import styles from './index.module.css';
+import styles from './page.module.css';
 
 export default function Atividade04() {
     const [inputValue, setInputValue] = useState({ quantidade: '', produto: '' });
@@ -42,9 +44,9 @@ export default function Atividade04() {
     };
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-theme={tema}>
             <header className={styles.header}>
-                <h1>Atividade 4 - Lista de compra</h1>
+                <h1 className={styles.titulo}>Atividade 4 - Lista de compra</h1>
                 <button onClick={toggleTema} className={styles.btnTema}>
                     {tema === 'light' ? '🌙 Modo Escuro' : '☀️ Modo Claro'}
                 </button>
