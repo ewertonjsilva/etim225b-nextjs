@@ -52,7 +52,7 @@ function Atividade05() {
 
   return (
     <div className={styles.container}>
-      <h1>Mockup CRUD Vite</h1>
+      <h1>Mockup CRUD Next JS</h1>
 
       <form onSubmit={handleSubmit}>
         <input 
