@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import { UserPlus, CheckCircle, Edit, ArrowRight, ArrowLeft, Plus, Trash2, Save } from 'lucide-react';
+import { UserPlus, CheckCircle, Edit, ArrowRight, ArrowLeft, Plus, Trash2, Save, Shirt } from 'lucide-react';
+
+import Camisa from './camisa';
 
 export default function CadastroEquipe() {
     const [etapa, setEtapa] = useState(1);
@@ -144,7 +146,17 @@ export default function CadastroEquipe() {
                         <div className={styles.summary}>
                             <p><strong>Equipe:</strong> {equipe.nome} ({equipe.categoria})</p>
                             <p><strong>Responsável:</strong> {equipe.email}</p>
-                            <p><strong>Cores:</strong> {equipe.corPrimaria} {equipe.temReserva === 'sim' && ` / ${equipe.corSecundaria}`}</p>
+                            <div>
+                            <p><strong>Uniforme: </strong> {/*{equipe.corPrimaria} {equipe.temReserva === 'sim' && ` / ${equipe.corSecundaria}`}*/}</p>
+                            <Camisa 
+                                fillColor={equipe.corPrimaria} 
+                                strokeColor="#000000" 
+                            />
+                            {equipe.temReserva === 'sim' ? <Camisa 
+                                fillColor={equipe.corSecundaria} 
+                                strokeColor="#000000" 
+                            /> : null }
+                            </div>
                             <hr />
                             <p><strong>Membros ({integrantes.length}):</strong></p>
                             <div className={styles.smallList}>
